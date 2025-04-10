@@ -1,0 +1,256 @@
+html { scroll-behavior: smooth; scroll-snap-align: start;} 
+body { margin: 0; box-sizing: border-box; counter-reset: section; font-size: 1vw;} 
+
+
+@media screen and (max-width: 600px){
+    main{
+        display: inline;
+    }
+}
+
+header{
+    z-index: 40;
+    position: sticky;
+    top: 0;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    padding: 1em;
+    width: 100%;
+    height: 5vh;
+    align-items: center;
+    gap: 5vh;
+    overflow: hidden;
+    background-color: gray;
+    color: #fff;
+
+    font-size: 1.2vw;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style:normal;
+}
+
+header a{
+    color: #fff;
+    text-decoration: none;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+    height: 24px;
+}
+
+.material-symbols-outlined {
+    align-self: center; /*közepre igazitja a jeleket ha a doboz flex*/
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+header * span{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5vh;
+}
+
+#menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: lightgrey;
+    overflow: auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+#menu li a {
+    display: block;
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+#menu li a embed{
+    display: none;
+}
+  
+#menu li a#active {
+    background-color: green;
+    color: rgb(255, 255, 255);
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    align-content: center;
+
+}
+
+#menu li a#active embed {
+    display: inline;
+}
+  
+#menu li a:hover:not(#active) {
+    filter: drop-shadow(8px 8px 10px gray);
+    background-color: rgba(0, 128, 0, 0.486);
+    color: white;
+}
+
+#szoveghelye{
+    height: 100%;
+
+
+    justify-items: center;
+}
+
+h2::before {
+    counter-increment: section;
+    content: counter(section) ". ";
+}
+.alap{
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 2em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#Arduino{
+    display: block;
+}
+#Igm{
+    display: none;
+}
+#Word{
+    display: none;
+}
+
+th, td {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#Code{
+    border: solid black 0.1em;
+    background-color: rgb(235, 235, 235);
+    padding: 1em;
+    margin: auto;
+    width: 70%;
+    overflow-x:scroll;
+    margin-bottom: 20px;
+}
+
+.copybutton{
+    background-color: orange;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5em;
+    float: right;
+    cursor: pointer;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.25s;
+}
+
+.copybutton:active{
+    background-color: darkgoldenrod;
+}
+
+.copybutton:hover{
+    filter: drop-shadow(0 5px 0 crimson);
+    transform: translateY(-5px);
+}
+
+footer{
+    z-index: 40;
+    top: 0;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    width: 100%;
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+    overflow: hidden;
+    background-color: gray;
+    color: #fff;
+
+    font-size: 1vw;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style:normal;
+    padding: 3vh;
+    
+}
+
+footer a{
+   text-decoration: none;
+   color: #fff;
+
+    font-size: 1vw;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style:normal;
+}
+
+.Galleria{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    align-items: center;
+    justify-content:space-evenly;
+    margin: 2em;
+}
+
+.kep{
+    display: flex;
+    height: 40vh;
+    align-items: center;
+    
+}
+
+.kep img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.comment{
+    box-sizing: border-box;
+    width: 45vh;
+    margin: 1em;
+    clip-path: polygon(10% 100%, 100% 100%, 100% 0, 0 0, 10% 12%);
+    background-color: lightgray;
+}
+.commentinside{
+    padding-left: 4.5em;
+    padding-right: 1em;
+}
+
+.kozepreigazitasdiv{
+    display: flex;
+    align-items: center;
+    margin: 2em;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.kozepreigazitasdiv  button{
+    cursor: pointer;
+}
+
+.inline-icon {
+    vertical-align: bottom;
+    font-size: 1vw !important;
+ }

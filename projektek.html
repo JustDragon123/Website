@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projektek</title>
+
+    <link rel="stylesheet" href="projektek.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_upward,close,close_fullscreen,content_copy,download,remove" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+    </style>
+</head>
+<body>
+    <span id="Focim"></span>
+    <header><div style="flex-grow: 10; text-align: left;">Projektek</div>
+        <a href="index.html" target="_self"><span class="material-symbols-outlined">remove</span></a>
+        <a href="index.html" target="_self"><span class="material-symbols-outlined">close_fullscreen</span></a>
+        <a href="index.html" target="_self"><span class="material-symbols-outlined">close</span></a>
+    </header>
+    <main>
+        <ul id="menu">
+            <li><a id="active" href=""><embed src="kepek/arduino.svg" style="width: 5vh; vertical-align:middle; filter: invert(1)"> Arduino "Napraforgó"</a></li>
+            <li><a href=""><embed src="data:image/png;base64,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" style="width: 5vh; vertical-align:middle;"> IGM Termelési gyakorlat projektek</a></li>
+            <li><a href=""><embed src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg" style="width: 5vh; vertical-align:middle;"> Útmuató World űrlap készítéséhez</a></li>
+        </ul>
+        
+        <div id="szoveghelye">
+            <div class="alap" id="Arduino">
+                <h1>Arduino "Napraforgó"</h1>
+                
+                <p>&emsp;Manapság egyre nagyobb jelentőséget kap a megújuló energia és annak hatékony előállítása. 
+                    A projektem egy napelem szabályzó rendszert modellez, amely egy tengely mentén automatikusan a 
+                    fényforrás irányába fordul. Az eredeti célom egy saját, otthoni tó levegőztető rendszerének optimalizálása volt, 
+                    azáltal, hogy a napelemes tápegység folyamatosan a nap felé forduljon. Ezzel biztosítható, hogy a levegőztető rendszer 
+                    maximális teljesítménnyel működjön anélkül, hogy emberi beavatkozásra lenne szükség. 
+                </p>
+                
+                <h2>Működési elve</h2>
+                
+                <p>&emsp;Két LDR diódát helyezünk a napelem két szélére, párhuzamosan annak síkjával. 
+                    (Mivel a modellemen nincs felszerelve napelem, a diódákat egy kis méretű dugaszolópanel két 
+                    szélére rögzítettem.) A két LDR dióda fényérzékelési értékeit figyelve jelet küldünk a szervómotornak, 
+                    amely az érzékelt fényintenzitás különbsége alapján elmozdul abba az irányba, ahol az LDR több fényt kap.
+                </p>
+    
+                <h2>Amit használtam hozzá:</h2>
+                <ul>
+                    <li>1db Arduino (Én Arduino Mega 2560-at használtam)</li>
+                    <li>2db LDR Fotoellenállás</li>
+                    <li>2db 10kΩ ellenállás</li>
+                    <li>1db 5V-os szervó</li>
+                    <li>1db Kisméretű dugaszolópanel</li>
+                    <li>11db jumper vezeték</li>
+                </ul>
+    
+                <h2>Kapcsolási rajz</h2>
+                <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 2em; align-items: center;">
+                    <embed src="portkepek/Projektek/arduino/Napraforgó.pdf" width="630" height="490" type="application/pdf" style="border: 0.1em solid black;" >
+                    <img src="portkepek/Projektek/arduino/arduino kapcsolas.png" alt="Arduino Kapcsolas" width="500" height="270" >
+                </div>
+
+                <h2>A kód</h2>
+                <div id="Code">
+                    <button class="copybutton" data-copy="#ArduinoCode" >
+                        <span class="material-symbols-outlined">
+                            content_copy
+                        </span>
+                        <span>Kód Másolása</span>
+                    </button>
+                    <pre>
+<code id="ArduinoCode">
+<span style="color:darkgreen;">#include</span> &lt;Servo.h&gt;  <span style="color:gray;">//Beimportáljuk a szervó működéséhez szükséges könyvtárat</span>
+Servo szervomotor ;         <span style="color:gray;">//A szervót inicialízáljuk "szervomotor" néven</span>
+<span style="color:darkcyan;">int</span> keletLDRPort = 5;
+<span style="color:darkcyan;">int</span> nyugatLDRPort = 1;
+<span style="color:darkcyan;">int</span> kelet = 0;
+<span style="color:darkcyan;">int</span> nyugat = 0;
+<span style="color:darkcyan;">int</span> kulombseg = 0;
+<span style="color:darkcyan;">int</span> minpos = 14;
+<span style="color:darkcyan;">int</span> maxpos = 180;  
+<span style="color:darkcyan;">int</span> pos = 120; <span style="color:gray;">//120 egyenes felfele</span>
+<span style="color:darkcyan;">int</span> i;
+
+<span style="color:darkcyan;">void</span> <span style="color:rgb(235, 129, 0);">setup</span>()
+{
+  <span style="color:rgb(235, 129, 0);">szervomotor</span>.<span style="color:rgb(235, 129, 0);">attach</span>(2);
+  <span style="color:rgb(235, 129, 0);">szervomotor</span>.<span style="color:rgb(235, 129, 0);">write</span>(pos); <span style="color:gray;">//A szervó első lefutásakor beáll egyenesen felfele</span>
+  <span style="color:rgb(235, 129, 0);">Serial</span>.<span style="color:rgb(235, 129, 0);">begin</span>(9600);
+}
+
+<span style="color:darkcyan;">void</span> <span style="color:rgb(235, 129, 0);">loop</span>()
+{
+  kelet = <span style="color:rgb(235, 129, 0);">analogRead</span>(keletLDRPort);  <span style="color:gray;">//beolvassuk a "keleti" felén lévő LDR-t</span>
+  nyugat = <span style="color:rgb(235, 129, 0);">analogRead</span>(nyugatLDRPort); <span style="color:gray;">//beolvassuk a "nyugati" felén lévő LDR-t</span>
+  kulombseg = (kelet - nyugat)/2;       <span style="color:gray;">//A külömbséget kiszámoltatjuk majd el osszuk kettővel a kisebb számmal való dolgozáshoz</span>
+  
+    <span style="color:darkolivegreen">for</span> (i = 0; i < 2; i+=1){
+        <span style="color:darkolivegreen">if</span> (kulombseg > 10){              <span style="color:gray;">//Itt ha a külömbség nagyobb mint 10 akkor elfordítja a szervót a servó elejétől nézve jobbra</span>
+        pos -= 2;
+        <span style="color:darkolivegreen">if</span> (pos > minpos){
+            <span style="color:rgb(235, 129, 0);">szervomotor</span>.<span style="color:rgb(235, 129, 0);">write</span>(pos);
+        } else {
+          pos += 2;
+        }
+      } <span style="color:darkolivegreen">else if</span> (kulombseg < -10){        <span style="color:gray;">//Itt ha a külömbség kissebb mint -10 akkor elfordítja a szervót a servó elejétől nézve balra</span>
+        pos += 2;                               <span style="color:gray;">//széljegyzet: Azért nem 0 mivel így nem mozog be a szervó minden kissebb árnyéknál</span>
+        <span style="color:darkolivegreen">if</span> (pos < maxpos){
+            <span style="color:rgb(235, 129, 0);">szervomotor</span>.<span style="color:rgb(235, 129, 0);">write</span>(pos);
+        } <span style="color:darkolivegreen">else</span> {
+          pos -= 2;
+        }
+      }                             
+    }
+    
+  <span style="color:rgb(235, 129, 0);">Serial</span>.<span style="color:rgb(235, 129, 0);">print</span>("Kelet: "); 
+  <span style="color:rgb(235, 129, 0);">Serial</span>.<span style="color:rgb(235, 129, 0);">println</span>(kelet);         <span style="color:gray;">//visszajelzést ad az arduino a keleti oldalán lévő LDR értékéről</span>
+  <span style="color:rgb(235, 129, 0);">Serial</span>.<span style="color:rgb(235, 129, 0);">print</span>("Nyugat: ");
+  <span style="color:rgb(235, 129, 0);">Serial</span>.<span style="color:rgb(235, 129, 0);">println</span>(nyugat);       <span style="color:gray;">//visszajelzést ad az arduino a nyugati oldalán lévő LDR értékéről</span>
+  <span style="color:rgb(235, 129, 0);">Serial</span>.<span style="color:rgb(235, 129, 0);">print</span>("Servó poziciója: ");
+  <span style="color:rgb(235, 129, 0);">Serial</span>.<span style="color:rgb(235, 129, 0);">println</span>(pos);          <span style="color:gray;">//visszajelzést ad az arduino a szervó helyzetéről</span>
+  <span style="color:rgb(235, 129, 0);">Serial</span>.<span style="color:rgb(235, 129, 0);">println</span>(kulombseg);    <span style="color:gray;">//visszajelzést ad az arduino a két LDR közötti külömbslgről</span>
+  <span style="color:rgb(235, 129, 0);">delay</span>(100);
+  
+}
+</code>
+                    </pre>
+                </div>
+
+                <h2>Képek</h2>
+                <div class="Galleria">
+                    <div class="kep">
+                        <img src="portkepek/Projektek/arduino/IMG_20250320_142735.jpg" alt="arduino kep1">
+                    </div>
+                    <div class="kep">
+                        <img src="portkepek/Projektek/arduino/IMG_20250321_094414.jpg" alt="arduino kep">
+                    </div>
+                    <div class="kep">
+                        <iframe src="https://drive.google.com/file/d/14Et6ArKFdyhkcS3ZYJKbnm39D9wD1HS2/preview" height="100%" style="aspect-ratio: 16/9;" allow="autoplay"></iframe>
+                    </div>
+                    <div class="kep">
+                        <img src="portkepek/Projektek/arduino/IMG_20250321_094448.jpg" alt="arduino kep">
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="alap" id="Igm">
+                <h1>IGM Termelési gyakorlat projektek</h1>
+                <h2>Hét</h2>
+                <p>&emsp;Az első héten az osztálytársammal egy projektfeladaton dolgoztunk mentorunk segítségével. 
+                    Ekkor megismerkedtünk a cég által használt PLC-vel és annak alapvető programozásával. 
+                    Programjainkat ST (Structured Text) nyelven kellett írni, amely akkor még újdonság volt számunkra, 
+                    de a hét folyamán sikeresen elsajátítottuk. Projektjeink között szerepelt egy egyszerű, gombbal működtetett 
+                    közlekedési jelzőlámpa, valamint végső projektként különböző reflexmérő „játékokat” készítettünk.</p>
+                    
+                <h3>&emsp;Kódok amiket írtunk és a projektek:</h3>
+                    <div class="Galleria">
+                        <div class="kep">
+                            <img src="portkepek/Projektek/IGM 1.hét/IMG_20250113_135748.jpg" alt="programkód kép 1">
+                        </div>
+                        <div class="kep">
+                            <img src="portkepek/Projektek/IGM 1.hét/IMG_20250113_142617.jpg" alt="programkód kép 2">
+                        </div>
+                        <div class="kep">
+                            <iframe src="https://drive.google.com/file/d/1H1IPn4j0NXCMu9JpRmLuuVRWs29lvVD_/preview" height="100%" style="aspect-ratio: 16/9;" allow="autoplay"></iframe>
+                        </div>
+                        <div class="kep">
+                            <img src="portkepek/Projektek/IGM 1.hét/IMG_20250113_142648.jpg" alt="programkód kép 3">
+                        </div>
+                        <div class="kep">
+                            <img src="portkepek/Projektek/IGM 1.hét/IMG_20250113_142635.jpg" alt="programkód kép 3">
+                        </div>
+                        <div class="kep">
+                            <img src="portkepek/Projektek/IGM 1.hét/IMG_20250113_142629.jpg" alt="programkód kép 3">
+                        </div>
+                        <div class="kep">
+                            <iframe src="https://drive.google.com/file/d/1clzhx8Y0k4zZfTYaF3pT8PgthWlbsBe1/preview"  height="100%" style="aspect-ratio: 16/9;" allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                <h2>Hét</h2>
+                <p>&emsp;A második héten a „terepen” kamatoztathattuk és tovább fejleszthettük megszerzett tudásunkat. 
+                    Ezen a héten egy másik mentor munkáját segítettem egy robot beüzemelésében és naplózásában. 
+                    Feladataim közé tartozott a már más szakemberek által bekötött villamos szekrény mérése és az 
+                    eredmények rögzítése, valamint a robot alapvető mozgástengelyeinek tesztelése.
+                </p>
+                        
+                <h3>&emsp;Néhány kép ami a 2. héten készült: </h3>
+                    <div class="Galleria">
+                        <div class="kep">
+                            <iframe src="https://drive.google.com/file/d/1Yhcko_eM4GFDhtDXufD5KdjCMDfkoYGD/preview" height="100%" style="aspect-ratio: 16/9;" allow="autoplay"></iframe>
+                            <!--<div class="comment">
+                                <div class="commentinside">
+                                    <p>Itt a robot a következő, általam írt, kódót folytatta:</p>
+                                <pre><p>
+1) Alap point - Non-Linear
+2) Erzekelo (40V) kiadása a fém részre 
+3.0) 1. pont megközelítése pont
+3.1) 1. pont közelítése
+3.2) 1. pont megközelítése pont
+3.3) random movement to not hit the munkadarab
+3.4) 2.pont meközelítése pont
+3.5) 2.pont közelítése
+3.6) 2.pont megközelítése pont
+3.7) random movement to not hit the munkadarab
+3.8) 3.pont meközelítése pont
+3.9) 3.pont közelítése
+3.10)3.pont meközelítése pont
+4) Erzekelo kikapcsolasa
+5) Shiftelés megkezdése
+6) random movement to not hit the munkadarab
+7) a munkadarab széle pont megéríntése
+8) Shiftelés vége</p>
+                                </pre>
+                                </div>
+                                    
+                            </div>-->
+                        </div>
+        
+                        <div class="kep">
+                            <img src="portkepek/Projektek/IGM 2.hét/IMG_20250121_113838.jpg" alt="programkód kép 3">
+                        </div>
+                    </div>
+        
+            </div>
+            <div class="alap" id="Word">
+                <h1>Útmuató World űrlap készítéséhez</h1>
+                <div class="kozepreigazitasdiv">
+                    <iframe src="https://drive.google.com/file/d/18vzf2LR2GUafQtpiH9kjH4-1P3uSmZGy/preview"  style="height: 100vh; aspect-ratio: 1/calc(sqrt(2));" allow="autoplay"></iframe>
+                    <a href="portkepek/Projektek/Varga Erik_urlap keszitese.pdf"><button class="copybutton">Letöltés<span class="inline-icon material-symbols-outlined">
+                        download
+                        </span></button></a>
+                </div>
+                
+                
+                
+        
+            </div>
+        </div>
+    </main>
+    
+    
+    <footer>
+        <a href="#Focim"><span class="material-symbols-outlined inline-icon">arrow_upward</span> Vissza az oldal tetejére <span class="material-symbols-outlined inline-icon">arrow_upward</span></a>
+    </footer>
+    <script src="projektek.js"></script>
+</body>
+</html>
