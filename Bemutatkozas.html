@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V.E. Portfolió - Bemutatkozás</title>
+
+    <link rel="icon" type="image/x-icon" href="kepek/bemutat.png">
+    <link rel="stylesheet" href="bemutatkozas.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_upward,close,close_fullscreen,content_copy,download,format_size,remove,text_decrease,text_increase" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+    </style>
+
+</head>
+<body>
+    <span id="Focim"></span>
+    <header>
+        <div style="flex-grow: 10; text-align: left;">Bemutatkozás</div>
+
+        <div style="display: flex; gap: 2vw; justify-content: space-evenly;"> 
+            <button onclick="changeFontSize(-0.1)" class="button material-symbols-outlined" title="Kisebb betűméret">
+                <span class="material-symbols-outlined">text_decrease</span>
+            </button>
+            <button onclick="resetFontSize()" class="button material-symbols-outlined" title="Alapértelmezett méret">
+                <span class="material-symbols-outlined">format_size</span>
+            </button>
+            <button onclick="changeFontSize(0.1)" class="button material-symbols-outlined" title="Nagyobb betűméret">
+                <span class="material-symbols-outlined">text_increase</span>
+            </button>
+            
+        </div>
+        
+
+        <a href="index.html" target="_self"><span class="material-symbols-outlined" >remove</span></a>
+        <a href="index.html" target="_self"><span class="material-symbols-outlined">close_fullscreen</span></a>
+        <a href="index.html" target="_self"><span class="material-symbols-outlined">close</span></a>
+    </header>
+
+    <div id="bemutatkozas">
+        <img src="https://drive.google.com/thumbnail?id=1VbaOEhzw_ifjdooNnB9Ovvy2l419Sjfy&sz=w1000" alt="Kep rólam">
+        <h1><u>Üdvözlöm a Portfoliómon!</u></h1>
+        <h2>A nevem <i>Varga Erik</i>.</h2>
+        <h3>Rólam:</h3>
+        <p>&nbsp;A <a href="https://gyor-pattantyus.www.intezmeny.edir.hu/" target="_blank">Győri SZC Pattantyús-Ábrahám Géza Technikum</a>, 
+            Ipari Informatikai Technikus szak tanulója vagyok, és duális képzésben veszek részt a 
+            <a href="https://www.gyvakk.hu/" target="_blank">Győri Villamosipari Ágazati Képzőközpont</a>ban. 
+            Gyerekkorom óta érdekeltek a robotok és azok programozása, és a jövőben is ebben a szakágban szeretnék elhelyezkedni.
+        </p>
+        <h3>Önreflexió: </h3>
+        <p>&nbsp;Technikumi éveim alatt megismerkedtem különböző backend programozási nyelvekkel (pl.: Python, Java), 
+            frontend technológiákkal (pl.: HTML, CSS, JavaScript), mikrokontroller-programozási nyelvekkel
+            (pl.: Arduino, PICKIT), valamint PLC programozással. Tanulmányaimat mindig 4-es átlag felett teljesítettem.
+            Aktív tagja voltam a helyi diákönkormányzatnak, diákelnöknek is indultam, és az elmúlt öt évben osztálytitkári
+            pozíciót töltöttem be. Ezeknek köszönhetően fejlesztettem szociális készségeimet és csapatmunkában való 
+            együttműködésemet.
+        </p>
+
+        <h3>Eredményeim: </h3>
+        <p>&nbsp;  Az elmúlt években különböző kurzusokon, és versenyeken vettem részt, amikre büszke vagyok:</p>
+        <ul>
+            <li>B2 Komplex nyelvvizsgát szereztem Angol nyelvből.</li>
+            <li>Emlet szintű érettségin sikeres 89% eredményt értem el Angol nyelvből.</li>
+            <li>A helyi, Széchenyi István Egyetemen rendezett "Bevezetés a Java Programozásba" kurzust sikeresen teljesítettem.</li>
+            <li>Oklevelet kaptam a kiemelkedő közösségi munkámért az iskolától.</li>
+        </ul>
+        
+        <h3>Elérhetőségeim: </h3>
+        <span id="elerhetosegek">
+            <div>
+                <a href="https://facebook.com/erik.varga.3557440" target="_blank" style="background: #3B5998; color: white;" class="fa fa-facebook"></a>
+                <h4>Facebook</h4>
+            </div>
+            <div>
+                <a href="mailto:varger12@gmail.com" target="_blank" style="background: orange; color: white;" class="fa fa-envelope"></a>
+                <h4>E-Mail</h4>
+            </div>
+            <div>
+                <a href="https://justdragon123.github.io/Website/" target="_blank" style="background: green; color: white;" class="fa fa-globe"></a>
+                <h4>Weboldal</h4>
+            </div>
+            
+        </span>
+    
+    </div>
+    <footer>
+        <a href="#Focim"><span class="material-symbols-outlined inline-icon">arrow_upward</span> Vissza az oldal tetejére <span class="material-symbols-outlined inline-icon">arrow_upward</span></a>
+    </footer>
+
+    <script>
+        let currentFontSize = 1.1;
+    
+        function changeFontSize(delta) {
+            currentFontSize = Math.max(0.5, currentFontSize + delta); // Prevent font size from going too small
+            document.body.style.fontSize = currentFontSize + "em";
+        }
+
+        function resetFontSize() {
+        currentFontSize = 1.1;
+        document.body.style.fontSize = "1.1em";
+        }
+    </script>
+</body>
+</html>
