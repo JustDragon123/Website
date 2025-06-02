@@ -1,5 +1,6 @@
 html { scroll-behavior: smooth; scroll-snap-align: start;} 
 
+
 /*notphone*/
 @media only screen and (orientation:landscape) { /*notphone*/
 
@@ -24,6 +25,12 @@ html { scroll-behavior: smooth; scroll-snap-align: start;}
         display: flex;
         flex-direction: column;
     }
+
+    .Window1:nth-child(1){
+        animation: enetr-up 0.75s 1 forwards;
+        animation-delay: 0;
+    }
+    
     
     #bemutatkozas{
         background-color: white;
@@ -32,6 +39,8 @@ html { scroll-behavior: smooth; scroll-snap-align: start;}
         overflow-y: scroll;
         height: 100%;
     }
+
+    
     
     #bemutatkozas img{
         width: 30vh;
@@ -178,10 +187,6 @@ html { scroll-behavior: smooth; scroll-snap-align: start;}
         background-position: center;
     }
     
-    @keyframes diodablink {
-        0%{background-image: url(kepek/diodabright.png);}
-        40%{background-image: url(kepek/dioda.png);}
-    }
     
     
     /*--------------------------------------------------------------------------------------------------------------------*/
@@ -311,12 +316,7 @@ html { scroll-behavior: smooth; scroll-snap-align: start;}
     
     
     
-    @keyframes marquee{
-        0%   { background-position-y: 0%;
-               background-position-x: 0%;}
-        100% { background-position-y: -195%;
-               background-position-x: 200%;}
-    }
+    
     
     
     
@@ -368,25 +368,12 @@ html { scroll-behavior: smooth; scroll-snap-align: start;}
     }
     
     #doc1{animation: fallingdocs1 4s linear infinite;}
-    #doc2{animation: fallingdocs2 2.5s linear infinite;}
+    #doc2{animation: fallingdocs2 3.5s linear infinite;}
     #doc3{animation: fallingdocs1 3s linear infinite;}
-    #doc4{animation: fallingdocs2 3.5s linear infinite;}
+    #doc4{animation: fallingdocs2 2.5s linear infinite; }
     
     
-    @keyframes fallingdocs1 {
-        0%{top: -20vh;
-            transform: rotateZ(0);}
-        100%{top: 30vh;
-             transform: rotateZ(350deg);}
-    }
     
-    
-    @keyframes fallingdocs2 {
-        0%{top: -20vh;
-            transform: rotateZ(20deg);}
-        100%{top: 30vh;
-             transform: rotateZ(-300deg);}
-    }
     
     
     
@@ -411,6 +398,8 @@ html { scroll-behavior: smooth; scroll-snap-align: start;}
         display: flex;
         justify-content: center;
         padding-top: 2vh;
+
+        
         
     }
     
@@ -503,11 +492,7 @@ html { scroll-behavior: smooth; scroll-snap-align: start;}
     }
     
     
-    @keyframes boing {
-        0%{transform: translateY(0px);}
-        10%{transform: translateY(-10px);}
-        20%{transform: translateY(0px);}
-    }
+    
     
     
     #MunkanaploWindow:hover div:nth-child(4){
@@ -612,11 +597,7 @@ html { scroll-behavior: smooth; scroll-snap-align: start;}
         
     }
     
-    @keyframes housejump{
-        0%   { transform: translateY(0) scaleX(1.1);}
-        70% {  transform: translateY(-10px) scaleX(0.9)}
-        100%   { transform: translateY(0) scaleX(1.1);}
-    }
+    
     
     
     /*--------------------------------------------------------------------------------------------------------------------*/
@@ -752,6 +733,15 @@ html { scroll-behavior: smooth; scroll-snap-align: start;}
         overflow: hidden;
     }
     
+    .WindowKocka:nth-child(1){
+        animation: enetr-side 0.75s 1 forwards;
+        animation-delay: 0.4s;
+    }
+
+    .WindowKocka:nth-child(2){
+        animation: enetr-side 0.75s 1 forwards;
+        animation-delay: 0.3s;
+    }
     
     .Window2
     {
@@ -761,6 +751,19 @@ html { scroll-behavior: smooth; scroll-snap-align: start;}
         border: lightgray 0.25em solid;
         overflow: hidden;
     }
+
+    .Window2:nth-child(1){
+        animation: enetr-down 0.75s 1 forwards;
+        animation-delay: 0.5s;
+    }
+    
+    .Window2:nth-child(2){
+        animation: enetr-down 0.75s 1 forwards;
+        animation-delay: 0.25s;
+    }
+        
+
+
     .xpbutton {
         cursor: url(kepek/point.png),auto;
         scale: 160%;
@@ -836,7 +839,6 @@ html { scroll-behavior: smooth; scroll-snap-align: start;}
 
     }
     
-    
 /*phone*/
 @media only screen and (orientation:portrait) { /*phone*/
 
@@ -852,7 +854,6 @@ html { scroll-behavior: smooth; scroll-snap-align: start;}
         /* Bemutatkozás*/
         .Window1
         {
-            
             flex-grow: 0.25;
             max-height: 90vh;
             padding: 0;
@@ -1582,6 +1583,7 @@ html { scroll-behavior: smooth; scroll-snap-align: start;}
             padding: 0;
             border: lightgray 0.25em solid;
             overflow: hidden;
+
         }
         
         
@@ -1593,6 +1595,19 @@ html { scroll-behavior: smooth; scroll-snap-align: start;}
             border: lightgray 0.25em solid;
             overflow: hidden;
         }
+
+        .Window2{
+            animation: enetr-side 0.75s 1 forwards;
+            animation-timeline: view();
+            animation-range: entry 40% cover 60%;
+        }
+
+        .WindowKocka{
+            animation: enetr-side 0.75s 1 forwards;
+            animation-timeline: view();
+            animation-range: entry 20% cover 30%;
+        }
+
         .xpbutton {
             cursor: url(kepek/point.png),auto;
             scale: 160%;
@@ -1692,3 +1707,92 @@ html { scroll-behavior: smooth; scroll-snap-align: start;}
         
         
     }
+
+@media (prefers-reduced-motion: no-preference) and (orientation:landscape){
+
+    @keyframes marquee{
+        0%   { background-position-y: 0%;
+               background-position-x: 0%;}
+        100% { background-position-y: -195%;
+               background-position-x: 200%;}
+    }
+
+    @keyframes diodablink {
+        0%{background-image: url(kepek/diodabright.png);}
+        40%{background-image: url(kepek/dioda.png);}
+    }
+    
+
+    @keyframes fallingdocs1 {
+        0%{top: -20vh;
+            transform: rotateZ(0);}
+        100%{top: 30vh;
+             transform: rotateZ(350deg);}
+    }
+    
+    
+    @keyframes fallingdocs2 {
+        0%{top: -20vh;
+            transform: rotateZ(20deg);}
+        100%{top: 30vh;
+             transform: rotateZ(-300deg);}
+    }
+
+    @keyframes boing {
+        0%{transform: translateY(0px);}
+        10%{transform: translateY(-10px);}
+        20%{transform: translateY(0px);}
+    }
+
+    .Window1{
+        opacity: 0;
+    }
+    .Window2{
+        opacity: 0;
+    }
+    .WindowKocka{
+        opacity: 0;
+    }
+
+    @keyframes housejump{
+        0%   { transform: translateY(0) scaleX(1.1);}
+        70% {  transform: translateY(-10px) scaleX(0.9)}
+        100%   { transform: translateY(0) scaleX(1.1);}
+    }
+
+    @keyframes enetr-up {
+        from {
+            opacity: 0;
+            transform: translateY(-40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes enetr-side {
+        from {
+            opacity: 0;
+            transform: translateX(-40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes enetr-down {
+        from {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+        
+}
+
+
